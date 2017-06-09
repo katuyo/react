@@ -39,7 +39,7 @@ app.use(async ctx => {
     store.dispatch(getAllProducts());
     const html = renderToString(
         <Provider store={store}>
-            <StaticRouter location={ctx.req.url} context={}>
+            <StaticRouter location={ctx.req.url} context={ctx}>
                 {routes}
             </StaticRouter>
         </Provider>
